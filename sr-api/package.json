@@ -1,0 +1,27 @@
+{
+  "name": "sr-api",
+  "version": "1.0.0",
+  "description": "Java Training Project 1.2",
+  "main": "app.js",
+  "dependencies": {
+    "app-module-path": "^2.2.0",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.4.0",
+    "mongoose": "^5.8.11",
+    "nodemon": "^2.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "keywords": [
+    "nodejs",
+    "angular",
+    "mongodb",
+    "express"
+  ],
+  "author": "Patrick Victoria",
+  "license": "ISC"
+}
