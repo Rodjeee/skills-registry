@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 
 //Set Default Module Path
 require('app-module-path').addPath(__dirname);
@@ -9,6 +10,9 @@ require('src/config/db.js');
 
 //Using the Express Module
 let app = express();
+
+//CORS
+app.use(cors());
 
 //Body Parser 
 app.use(bodyParser.json({ extended: true }));

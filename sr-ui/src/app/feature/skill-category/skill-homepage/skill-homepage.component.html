@@ -1,0 +1,16 @@
+<div class="container">
+  <h1>What skills are you looking for?</h1>
+  <mat-label>SKILL NAME</mat-label>
+  <form [formGroup]="searchSkillForm" id="searchSkillForm">
+    <mat-form-field appearance="fill">
+      <input matInput id="searchSkillInput" formControlName="searchSkill">
+    </mat-form-field>
+    <button mat-flat-button>SEARCH</button>
+  </form>
+  <h3>SKILLS CATEGORY</h3>
+  <div>
+    <app-skill-category-list></app-skill-category-list>
+  </div>
+  <app-skill-list></app-skill-list>
+</div>
+

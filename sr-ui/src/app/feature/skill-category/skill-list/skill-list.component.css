@@ -1,0 +1,25 @@
+.container {
+  padding-left: 280px;
+}
+
+h2 {
+  color: #149979;
+  font-weight: bolder;
+  font-family: "Barlow", sans-serif;
+  line-height: 0.275rem;
+  padding-bottom: 30px;
+}
+
+
+::ng-deep .mat-card {
+  color: #4B4949;
+  background: #f1f1f1;
+  padding: 15px !important;
+  display: inline-block !important;
+  margin: 5px !important;
+}
+
+::ng-deep .mat-card-subtitle, .mat-card-content {
+  font-size: 17px;
+  font-weight: bolder !important;
+}
