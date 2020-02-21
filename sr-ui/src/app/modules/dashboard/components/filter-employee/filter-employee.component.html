@@ -1,0 +1,60 @@
+<div class="w-100">
+    <p class="content-title">Who are you looking for?</p>
+    <form class="row">
+
+        <!-- Employee name -->
+        <div class="col-sm-12 col-lg-3">
+            <mat-form-field class="w-100">
+                <mat-label>Employee name</mat-label>
+                <input matInput placeholder="Enter name">
+            </mat-form-field>
+        </div>
+
+        <!-- Skill -->
+        <div class="col-sm-12 col-lg-3">
+            <mat-form-field class="w-100">
+                <mat-chip-list #skillList>
+                    <mat-chip
+                        *ngFor="let skill of skills"
+                        [selectable]="selectable"
+                        [removable]="removable"
+                        (removed)="remove(skill)">
+                        {{ skill }}
+                        <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+                    </mat-chip>
+                    <input 
+                        placeholder="Skill"
+                        #skillInput
+                        [formControl]="skillCtrl"
+                        [matAutocomplete]="auto"
+                        [matChipInputFor]="skillList"
+                        [matChipInputSeparatorKeyCodes]="seperatorKeysCodes"
+                        (matChipInputTokenEnd)="add($event)"/>
+                </mat-chip-list>
+                <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
+                    <mat-option *ngFor="let skill of filteredSkills | async" [value]="skill">
+                        {{ skill }}
+                    </mat-option>
+                </mat-autocomplete>
+            </mat-form-field>
+        </div>
+
+        <!-- Sort by -->
+        <div class="col-sm-12 col-lg-3">
+            <mat-form-field class="w-100">
+                <mat-label>Sort by</mat-label>
+                <mat-select>
+                    <mat-option *ngFor="let detail of details" [value]="detail.value">
+                        {{ detail.viewValue }}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+
+        <!-- Submit button -->
+        <div class="col-sm-12 col-lg-3">
+            <button mat-raised-button class="vertical-center btn-submit">Search</button>
+        </div>
+
+    </form>
+</div>

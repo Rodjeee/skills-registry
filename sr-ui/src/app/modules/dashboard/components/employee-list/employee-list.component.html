@@ -1,0 +1,48 @@
+<div class="employee-list-container">
+  <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="position">
+      <mat-header-cell *matHeaderCellDef>No.</mat-header-cell>
+      <mat-cell *matCellDef="let employee">{{ employee.position }}</mat-cell>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef>Name</mat-header-cell>
+      <mat-cell *matCellDef="let employee"> {{ employee.name }} </mat-cell>
+    </ng-container>
+
+    <!-- Designation Column -->
+    <ng-container matColumnDef="designation">
+      <mat-header-cell *matHeaderCellDef>Designation</mat-header-cell>
+      <mat-cell *matCellDef="let employee">{{ employee.designation }}</mat-cell>
+    </ng-container>
+
+    <!-- Total Skills -->
+    <ng-container matColumnDef="totalSkill">
+      <mat-header-cell *matHeaderCellDef>Total Skills</mat-header-cell>
+      <mat-cell *matCellDef="let employee">{{ employee.totalSkill }}</mat-cell>
+    </ng-container>
+      
+    <!-- Last Update Column -->
+    <ng-container matColumnDef="updateDate">
+      <mat-header-cell *matHeaderCellDef>Last Update</mat-header-cell>
+      <mat-cell *matCellDef="let employee">{{ employee.updateDate }}</mat-cell>
+    </ng-container>
+
+    <!-- Get Details -->
+    <ng-container matColumnDef="getDetail">
+      <mat-header-cell *matHeaderCellDef>Detail</mat-header-cell>
+      <mat-cell *matCellDef="let employee">
+        <button mat-raised-button color="primary">Get Details</button>
+      </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+
+  <mat-paginator class="mat-paginator-sticky" [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+</div>
+  
