@@ -1,6 +1,25 @@
 <p class="content-title">SKILL CATEGORY</p>
+
+<!-- <mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
+    <!-- This is the tree node template for leaf nodes 
+    <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding>
+        <!-- use a disabled button to provide padding for tree leaf 
+        <button mat-icon-button disabled></button>
+        {{node.name}}
+    </mat-tree-node>
+    <!-- This is the tree node template for expandable nodes 
+    <mat-tree-node *matTreeNodeDef="let node;when: hasChild" matTreeNodePadding>
+        <button mat-icon-button matTreeNodeToggle [attr.aria-label]="'toggle ' + node.name">
+            <mat-icon class="mat-icon-rtl-mirror">
+                {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+            </mat-icon>
+        </button>
+        {{node.name}}
+    </mat-tree-node>
+</mat-tree> -->
+
 <mat-nav-list id="skillCategoryList">
-    <mat-list-item *ngFor="let sc of skillCategories">
-        <p class="item-list-name">{{sc.Name}}</p>
+    <mat-list-item *ngFor="let skillCategory of skillCategories" (click)="getSelectedCategory(skillCategory)">
+        <p class="item-list-name">{{skillCategory.Name}}</p>
     </mat-list-item>
 </mat-nav-list>

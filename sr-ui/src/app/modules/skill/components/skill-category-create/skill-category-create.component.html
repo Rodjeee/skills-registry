@@ -1,0 +1,13 @@
+<mat-dialog-content>
+    <h2 mat-dialog-title>ADDING NEW SKILL CATEGORY</h2>
+    <form [formGroup]="createSkillCategoryForm" method="POST">
+        <mat-form-field appearance="standard">
+            <p>Category Name</p>
+            <input matInput formControlName="Name" #Name name="categoryName">
+        </mat-form-field>
+        <mat-dialog-actions>
+            <button mat-dialog-close class="btn btn-danger">CANCEL</button>
+            <button class="btn btn-success" (click)="createSkillCategory(Name.value)" [disabled]="createSkillCategoryForm.pristine">SUBMIT</button>
+        </mat-dialog-actions>
+    </form>
+</mat-dialog-content>

@@ -1,0 +1,22 @@
+<mat-chip-list>
+    <mat-chip *ngFor="let skillName of skills">
+        <p class="chip-name">{{skillName.Name}}</p>
+        <mat-select>
+            <mat-option>
+                <button class="icon-menu-btn">
+                    <p class="select-option-name">Update</p>
+                </button>
+            </mat-option>
+            <mat-option>
+                <button class="icon-menu-btn">
+                    <p class="select-option-name">Delete</p>
+                </button>
+            </mat-option>
+        </mat-select>
+        <!--
+        <button class="icon-menu-btn">
+            <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+        </button>
+        -->
+    </mat-chip>
+</mat-chip-list>

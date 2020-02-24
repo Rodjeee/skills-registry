@@ -1,7 +1,14 @@
-<div class="container-fluid w-100 mt-3">
-    <app-search-skill></app-search-skill>
-    <div class="skill-category-list-container">
-        <app-skill-category-list></app-skill-category-list>
-    </div>
-    <app-skill-add-action></app-skill-add-action>
-</div>
+<mat-sidenav-container id="skill-container" class="h-100 gray-bg" autosize>
+    <mat-sidenav class="gray-bg" mode="side" opened>
+        <div id="skill-side-container" class="w-100">
+            <app-skill-category-list></app-skill-category-list>
+        </div>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div id="skill-main-container" class="container-fluid w-100">
+            <app-search-skill></app-search-skill>
+            <app-skill-add-action></app-skill-add-action>
+            <app-skill-list></app-skill-list>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container> 

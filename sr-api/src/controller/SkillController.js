@@ -13,6 +13,24 @@ const getAllSkills = async (req, res) => {
     });
 };
 
+const getAllSkillsInCategory = async (req, res) => {
+    const result = validationResult(req);
+    if (!result.isEmpty()) {
+        console.error(result.errors);
+        res.status(400).send(result.errors);
+    } else {
+        let skillCategoryID = req.params.skillCategoryID;
+        await Skill.find({Category: skillCategoryID}, (err, skill) => {
+            if(err) {
+                console.error(err);
+                res.send(err);
+            } else {
+                res.status(200).send(skill);
+            }
+        })
+    }
+}
+
 const getSkill = async (req, res) => {
     const result = validationResult(req);
     if (!result.isEmpty()) {
@@ -100,6 +118,9 @@ const validate = (method) => {
     let skillIdValidator =
         check('skillID').isMongoId().withMessage('Skill ID is invalid.');
 
+    let skillCategoryIdValidator =
+        check('skillCategoryID').isMongoId().withMessage('Skill Category ID is invalid.');
+
     let categoryValidator =
         check('Category').trim()
             .notEmpty().withMessage('Skill Category is required.')
@@ -136,6 +157,9 @@ const validate = (method) => {
         case 'getSkill': {
             return [skillIdValidator];
         }
+        case 'getAllSkillsInCategory': {
+            return [skillCategoryIdValidator]
+        }
     }
 };
 
@@ -143,6 +167,7 @@ module.exports = {
     addSkill,
     deleteSkill,
     getAllSkills,
+    getAllSkillsInCategory,
     getSkill,
     updateSkill,
     validate

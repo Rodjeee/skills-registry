@@ -1,3 +1,17 @@
 <mat-dialog-content>
-    <p>Hello</p>
+
+    <div *ngIf="!actionChoice">
+        <h2 mat-dialog-title>Which action do you want to perform?</h2>
+        <div class="add-action-choice">
+            <button mat-stroked-button (click)="newSkillCategoryContent()">ADD NEW SKILL CATEGORY</button>
+            <button mat-stroked-button (click)="newSkillToCategoryContent()">ADD NEW SKILL TO A CATEGORY</button>
+        </div>
+    </div>
+    <div *ngIf="isNewSkillCategory">
+        <app-skill-category-create></app-skill-category-create>
+    </div>
+    <div *ngIf="isNewSkillToCategory">
+        <app-skill-create></app-skill-create>
+    </div>
+
 </mat-dialog-content>

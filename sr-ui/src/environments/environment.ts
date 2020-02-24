@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  skillCategoryUrl: 'http://localhost:4100/skillcategories'
+  skillCategoryUrl: 'http://localhost:4100/skillcategories',
+  skillUrl: 'http://localhost:4100/skills'
 };
 
 /*

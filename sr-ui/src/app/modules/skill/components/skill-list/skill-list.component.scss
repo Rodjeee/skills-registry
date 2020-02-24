@@ -1,0 +1,28 @@
+::ng-deep .mat-standard-chip {
+    border-radius: 3px !important;
+    background-color: #f1f1f1 !important;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25) !important;
+    color: #4B4949 !important;
+}
+
+::ng-deep .mat-chip {
+    font-size: 18px !important;
+    font-family: "Barlow", sans-serif !important;
+    width: 20rem !important;
+    height: 55px !important;
+}
+
+i {
+    color: #4B4949;
+}
+
+.icon-menu-btn {
+    float: left;
+    margin: auto;
+    border: 0px;
+}
+
+.chip-name, .select-option-name {
+    margin: 0 auto;
+    color: #4B4949 !important;
+}

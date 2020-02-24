@@ -1,0 +1,71 @@
+::ng-deep .mat-form-field-underline {
+    /*change color of underline*/
+    background-color: #4B4949 !important;
+} 
+  
+::ng-deep .mat-form-field-ripple {
+    /*change color of underline when focused*/
+    background-color: #4B4949 !important;
+}
+
+::ng-deep .mat-input-element {
+    /*change color of label*/
+    color: #4B4949 !important;
+}
+
+::ng-deep .mat-button-wrapper {
+    color: #ffffff;
+}
+
+::ng-deep .mat-dialog-title {
+    color: #4B4949 !important;
+    font-weight: bold;
+    font-family: "Barlow", sans-serif;
+    margin: 0 !important;
+}
+
+::ng-deep .mat-dialog-container {
+    border-radius: 20px !important;
+}
+
+::ng-deep .mat-dialog-content {
+    height: 220px !important;
+}
+
+::ng-deep .mat-dialog-actions {
+    justify-content: center !important;
+}
+
+.btn {
+    display: inline-block;
+    margin: 8px;
+}
+
+.btn-danger:hover {
+    border-color: #A40606 !important;
+    color: #ffffff !important;
+    background-color: #A40606 !important;
+}
+
+.btn-danger {
+    background-color: #ffffff !important;
+    color: #A40606 !important;
+    border-color: #A40606 !important;
+}
+
+.btn-success:hover {
+    border-color: #149979 !important;
+    color: #ffffff !important;
+    background-color: #149979 !important;
+}
+
+.btn-success {
+    background-color: #ffffff !important;
+    color: #149979 !important;
+    border-color: #149979 !important;
+}
+
+p {
+    color: #4B4949 !important;
+    font-family: "Barlow", sans-serif;
+}

@@ -1,0 +1,32 @@
+h2 {
+    color: #4B4949;
+    margin-bottom:15px;
+}
+
+
+::ng-deep .mat-stroked-button {
+    border: 2px solid currentColor !important;
+    border-color: #149979 !important;
+    margin: 3px;
+    text-align: center !important;
+    ::ng-deep .mat-button-wrapper {
+        color: #149979 !important;
+        font-weight: bold;
+    }
+}
+
+::ng-deep .mat-stroked-button:hover {
+    transition: 0.3s;
+    background-color: #149979 !important;
+    ::ng-deep .mat-button-wrapper {
+        color: #ffffff !important;
+    }
+}
+
+::ng-deep .mat-dialog-container {
+    border-radius: 20px !important;
+}
+
+.add-action-choice {
+    justify-content: center !important;
+}

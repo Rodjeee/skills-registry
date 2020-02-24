@@ -5,6 +5,9 @@ router.route('/')
     .get(SkillController.getAllSkills)
     .post(SkillController.validate('addSkill'), SkillController.addSkill);
 
+router.route('/:skillCategoryID/list')
+    .get(SkillController.getAllSkillsInCategory);
+
 router.route('/:skillID')
     .get(SkillController.validate('getSkill'), SkillController.getSkill)
     .put(SkillController.validate('updateSkill'), SkillController.updateSkill)

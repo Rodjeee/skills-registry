@@ -8,10 +8,13 @@ import { SkillCategoryListComponent } from './components/skill-category-list/ski
 import { SearchSkillComponent } from './components/search-skill/search-skill.component';
 import { SkillAddActionComponent } from './components/skill-add-action/skill-add-action.component';
 import { SkillAddActionContentComponent } from './components/skill-add-action-content/skill-add-action-content.component';
+import { SkillCategoryCreateComponent } from './components/skill-category-create/skill-category-create.component';
+import { SkillListComponent } from './components/skill-list/skill-list.component';
+import { SkillCreateComponent } from './components/skill-create/skill-create.component';
 
 
 @NgModule({
-    declarations: [SkillComponent, SkillCategoryListComponent, SearchSkillComponent, SkillAddActionComponent, SkillAddActionContentComponent],
+    declarations: [SkillComponent, SkillCategoryListComponent, SearchSkillComponent, SkillAddActionComponent, SkillAddActionContentComponent, SkillCategoryCreateComponent, SkillListComponent, SkillCreateComponent],
     imports: [
 
         SharedModule,

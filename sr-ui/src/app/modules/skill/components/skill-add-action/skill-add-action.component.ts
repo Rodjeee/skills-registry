@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
+import { MatDialog, MatSnackBar } from '@angular/material';
 import { SkillAddActionContentComponent } from '../skill-add-action-content/skill-add-action-content.component';
 
 @Component({
@@ -9,21 +9,14 @@ import { SkillAddActionContentComponent } from '../skill-add-action-content/skil
 })
 export class SkillAddActionComponent implements OnInit {
 
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog, private snackbar: MatSnackBar) { }
 
   ngOnInit() {
   }
 
   openAddActionDialog(): void {
-    const dialogRef = this.dialog.open(SkillAddActionContentComponent, {
-      width: '350px'
-    });
-    console.log('h1');
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The skill add action button was closed' + result);
+    this.dialog.open(SkillAddActionContentComponent, {
+      width: '420px'
     });
   }
-
-
 }
